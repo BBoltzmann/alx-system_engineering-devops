@@ -1,2 +1,17 @@
 #!/bin/bash
-ls -l
+for file in *.html
+do
+  # Get the absolute path of the file
+  file_path="$(realpath "$file")"
+  
+  # Get the parent directory of the file
+  parent_dir="$(dirname "$file_path")"/..
+  
+  # Check if the file exists in the parent directory and is older than the current file
+  if [[ -e "$parent_dir/$file" ]] && [[ "$parent_dir/$file" -ot "$file_path" ]]; then
+    continue
+  fi
+  
+  # Copy the file to the parent directory
+  cp "$file" "$parent_dir"
+done
