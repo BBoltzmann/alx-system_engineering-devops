@@ -1,3 +1,2 @@
 #!/bin/bash
-ls -ap1 | sort -df | awk '{print $0","}' | tr -d '\n'; echo
-
+ls -la -p -m -v
