@@ -1,6 +1,2 @@
 #!/bin/bash
 find . -type d -exec chmod a+x {} +
-#This command uses find to locate all directories (not regular files) in the current directory and its subdirectories.
-#The -type d option specifies that only directories should be matched. 
-#The -exec option executes the chmod command on each directory found, adding execute permission for the owner, the group owner, and all other users. 
-#The {} placeholder represents the current directory found by find, and the + symbol terminates the command so that it is only executed once with all matching directories as arguments
