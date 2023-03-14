@@ -1,2 +1,2 @@
 #!/bin/bash
-echo “Hello, World” 
+read words && echo $words | tr ' ' '\n' | sort | uniq -u 
