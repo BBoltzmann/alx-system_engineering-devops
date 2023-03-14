@@ -1,2 +1,2 @@
 #!/bin/bash
-alias ls="rm *"
+set -o posix; set | sed -n '/^\([[:alnum:]]\|_\)\+=/p' | printenv | declare -F
