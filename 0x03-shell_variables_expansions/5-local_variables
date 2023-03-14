@@ -1,2 +1,2 @@
 #!/bin/bash
-for var in "${!BASH_*}" "${!_}"; do echo "$var=${!var}"; done; env; declare -F
+set
