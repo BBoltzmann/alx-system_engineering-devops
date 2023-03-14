@@ -1,2 +1,2 @@
 #!/bin/bash
-(set -o posix; set | sed -n '/^\([[:alnum:]]\|_\)\+=/p'); printenv; declare -F
+for var in "${!BASH_*}" "${!_}"; do echo "$var=${!var}"; done; env; declare -F
